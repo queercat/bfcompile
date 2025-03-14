@@ -1,5 +1,5 @@
 [package]
-name = "parse-fuck"
+name = "compile-fuck"
 version = "0.1.0"
 edition = "2024"
 
