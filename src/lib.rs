@@ -294,13 +294,10 @@ impl VM {
                 Opcode::JMP(address) => self.ip = address as usize - 1,
                 Opcode::PR => print!("{}", self.memory[self.dp] as u8 as char),
                 Opcode::RE => {
-                    let mut buffer = [0; 2];
+                    let mut buffer = [0; 1];
                     std::io::Read::read_exact(&mut std::io::stdin(), &mut buffer)
                         .expect("Failed to read input");
                     self.memory[self.dp] = buffer[0] as i32;
-                    if self.dp + 1 < self.memory.len() {
-                        self.memory[self.dp + 1] = buffer[1] as i32;
-                    }
                 }
                 Opcode::JZ(address) => {
                     if self.memory[self.dp] == 0 {
