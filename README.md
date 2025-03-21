@@ -1,4 +1,4 @@
-# Compile Fuck
+# BFcompile
 
 This is a Brainfuck bytecode compiler and virtual machine written in Rust. It parses Brainfuck source code, converts it into a series of opcodes, and executes the program on a virtual machine. The interpreter also supports serialization and deserialization of opcodes for saving or sharing bytecode as binary data.
 
